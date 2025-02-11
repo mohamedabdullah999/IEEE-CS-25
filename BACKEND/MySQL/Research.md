@@ -128,3 +128,46 @@ Show relationships, and in most personal naming conventions
 Ensure that each name is unique for same scope
 
 ## [<span style = "margin-left:300px"> link source </span>](https://en.wikipedia.org/wiki/Naming_convention#:~:text=A%20naming%20convention%20is%20a,the%20names%20based%20on%20regularities.)
+
+# Primary_key vs Unique_key
+
+The main difference between a primary key vs unique key is that a primary key is a key that uniquely identifies each record in a table but cannot store NULL values. In contrast, a unique key prevents duplicate values in a column and can store NULL values.
+[<span style = "margin-left:300px"> link source </span>](https://www.shiksha.com/online-courses/articles/primary-key-vs-unique-key/#1)
+
+<hr>
+
+# MySQL Constraints
+
+SQL constraints are used to specify rules for the data in a table.
+
+Constraints are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, the action is aborted.
+
+Constraints can be column level or table level. Column level constraints apply to a column, and table level constraints apply to the whole table.
+
+The following constraints are commonly used in SQL:
+
+- NOT NULL - Ensures that a column cannot have a NULL value
+- UNIQUE - Ensures that all values in a column are different
+- PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+- FOREIGN KEY - Prevents actions that would destroy links between tables
+- CHECK - Ensures that the values in a column satisfies a specific condition
+- DEFAULT - Sets a default value for a column if no value is specified
+- CREATE INDEX - Used to create and retrieve data from the database very quickly
+[<span style = "margin-left:300px"> link source </span>](https://www.w3schools.com/mysql/mysql_constraints.asp)
+ <hr>
+
+# MySQL CREATE INDEX Statement
+
+The CREATE INDEX statement is used to create indexes in tables.
+
+Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
+[<span style = "margin-left:300px"> link source </span>](https://www.w3schools.com/mysql/mysql_create_index.asp)
+
+<hr>
+
+# What's the Difference Between MySQL and PostgreSQL?
+
+MySQL is a relational database management system that lets you store data as tables with rows and columns. It’s a popular system that powers many web applications, dynamic websites, and embedded systems. PostgreSQL is an object-relational database management system that offers more features than MySQL. It gives you more flexibility in data types, scalability, concurrency, and data integrity.
+[<span style = "margin-left:300px"> link source </span>](https://aws.amazon.com/compare/the-difference-between-mysql-vs-postgresql/)
+
+<hr>
