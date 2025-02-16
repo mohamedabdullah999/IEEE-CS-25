@@ -171,3 +171,99 @@ MySQL is a relational database management system that lets you store data as tab
 [<span style = "margin-left:300px"> link source </span>](https://aws.amazon.com/compare/the-difference-between-mysql-vs-postgresql/)
 
 <hr>
+
+# Relationships in SQL - One-to-One, One-to-Many, Many-to-Many.
+
+<br>
+
+- Relationships in SQL tables define how tables are connected to one another. Building relationships in tables helps to organize and link data across multiple tables. Creating relationships among tables provides efficient data retrieval and maintenance maintenance.
+
+# Relationships in SQL
+
+- Relationships in SQL refer to the associations or connections between tables in a relational database. These relationships are established using foreign keys, which are columns in a table that refer to the primary key in another table. Relationships help organize and structure data, allowing for efficient data retrieval and maintaining data integrity.
+
+<span style = "color : red"> 1. One-to-One Relationship </span>
+
+- Definition: Each record in Table A is associated with one and only one record in Table B, and vice versa.
+  <br> <br>
+- Setup: Include a foreign key in one of the tables that references the primary key of the other table.
+  <br><br>
+
+- For example: Tables users and user_profiles, where each user has a single corresponding profile.
+
+<br><br>
+
+<span style = "color:yellow">2. One-to-Many Relationship </span>
+
+- Definition: Each record in Table A can be associated with multiple records in Table B, but each record in Table B is associated with only one record in Table A.
+  <br><br>
+- Setup: Include a foreign key in the "many" side table (Table B) that references the primary key of the "one" side table (Table A).
+  <br><br>
+- For example: Tables departments and employees, where each department can have multiple employees, but each employee belongs to one department.
+
+<br><br>
+
+<span style = "color : blue "> 3. Many-to-Many Relationship </span>
+<br><br>
+
+- Definition: Each record in Table A can be associated with multiple records in Table B, and vice versa.
+  <br><br>
+- Setup: Create an intermediate table (also known as a junction or linking table) that contains foreign keys referencing both related tables.
+  <br><br>
+- For example: Tables students and courses, where each student can enroll in multiple courses, and each course can have multiple students.
+  <br><br>
+
+[<span style="margin-left:300px">link source</span>](https://www.geeksforgeeks.orgrelationships-in-sql-one-to-one-one-to-many-many-to-many/)
+
+<hr>
+
+# Write-ahead logging.
+
+In computer science, write-ahead logging (WAL) is a family of techniques for providing atomicity and durability (two of the ACID properties) in database systems.[1]
+
+A write ahead log is an append-only auxiliary disk-resident structure used for crash and transaction recovery. The changes are first recorded in the log, which must be written to stable storage, before the changes are written to the database.[2]
+
+The main functionality of a write-ahead log can be summarized as:[3]
+
+- Allow the page cache to buffer updates to disk-resident pages while ensuring durability semantics in the larger context of a database system.
+- Persist all operations on disk until the cached copies of pages affected by these operations are synchronized on disk. Every operation that modifies the database state has to be logged on disk before the contents on the associated pages can be modified
+- Allow lost in-memory changes to be reconstructed from the operation log in case of a crash.
+<br> <br>
+[<span style="margin-left:300px">link source</span>](https://en.wikipedia.org/wiki/Write-ahead_logging)
+<hr>
+
+# Difference between Normalization and Denormalization
+
+Normalization and Denormalization are used to alter the structure of a database. The main difference between normalization and denormalization is that normalization is used to remove the redundancy in the table, while denormalization is used to add the redundancy which means combining multiple tables so that execute query quickly. In this article, we’ll explore the key differences between Normalization and Denormalization and how they impact database design.
+
+# What is the Normalization?
+
+Normalization is the method used in a database to reduce the data redundancy and data inconsistency from the table. It is the technique in which Non-redundancy and consistency data are stored in the set schema. By using normalization the number of tables is increased instead of decreased.
+
+Advantages
+
+- Data is reduced in the table.
+- Optimized memory.
+- Maintain data integrity.
+  <br> <br>
+  Disadvantages
+  _ The number of tables is increased.
+  _ Consume more resources when using joins expensive operations.
+  <br> <br>
+
+# What is the Denormalization?
+
+Denormalization is also the method which is used in a database. It is used to add the redundancy to execute the query quickly. It is a technique in which data are combined to execute the query quickly. By using denormalization the number of tables is decreased which oppose to the normalization.
+
+Advantages
+
+- Execute the query quickly.
+- Decreased the number of tables.
+
+Disadvantages
+
+- Wastage of memory because store the duplicate data.
+- Increase the number of tables.
+- Does not maintain data integrity.
+  <br> <br>
+  [<span style="margin-left:300px">link source</span>](https://www.geeksforgeeks.org/difference-between-normalization-and-denormalization/)
